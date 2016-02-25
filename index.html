@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://bizchat.us/roledemo/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Hotline.Chat!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Anyone chats to roles">
+    <meta name="author" content="Ying LI">
+    <link type="text/css" rel="stylesheet" media="screen" href="./index_files/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" media="screen" href="./index_files/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" media="screen" href="./index_files/theme.css">
+    <link type="text/css" rel="stylesheet" media="screen" href="./index_files/converse.css">
+    <script type="text/javascript" src="./index_files/jquery.js"></script>
+    <script type="text/javascript" src="./index_files/salsa20.js"></script>
+    <script type="text/javascript" src="./index_files/bigint.js"></script>
+    <!-- CryptoJS -->
+    <script type="text/javascript" src="./index_files/core.js"></script>
+    <script type="text/javascript" src="./index_files/enc-base64.js"></script>
+    <script type="text/javascript" src="./index_files/md5.js"></script>
+    <script type="text/javascript" src="./index_files/evpkdf.js"></script>
+    <script type="text/javascript" src="./index_files/cipher-core.js"></script>
+    <script type="text/javascript" src="./index_files/aes.js"></script>
+    <script type="text/javascript" src="./index_files/sha1.js"></script>
+    <script type="text/javascript" src="./index_files/sha256.js"></script>
+    <script type="text/javascript" src="./index_files/hmac.js"></script>
+    <script type="text/javascript" src="./index_files/pad-nopadding.js"></script>
+    <script type="text/javascript" src="./index_files/mode-ctr.js"></script>
+    <!-- until here -->
+    <script type="text/javascript" src="./index_files/eventemitter.js"></script>
+    <script type="text/javascript" src="./index_files/otr.js"></script>
+    <script type="text/javascript" src="./index_files/strophe.js"></script>
+    <script type="text/javascript" src="./index_files/strophe.vcard.js"></script>
+    <script type="text/javascript" src="./index_files/strophe.disco.js"></script>
+    <script type="text/javascript" src="./index_files/strophe.rsm.js"></script>
+    <script type="text/javascript" src="./index_files/strophe.ping.js"></script>
+    <script type="text/javascript" src="./index_files/underscore.js"></script>
+    <script type="text/javascript" src="./index_files/backbone.js"></script>
+    <script type="text/javascript" src="./index_files/backbone.browserStorage.js"></script>
+    <script type="text/javascript" src="./index_files/backbone.overview.js"></script>
+    <script type="text/javascript" src="./index_files/moment-with-locales.js"></script>
+    <script type="text/javascript" src="./index_files/jquery.browser.js"></script>
+    <script type="text/javascript" src="./index_files/index.js"></script>
+    <script type="text/javascript" src="./index_files/jed.js"></script>
+    <script type="text/javascript" src="./index_files/locales.js"></script>
+    <script type="text/javascript" src="./index_files/templates.js"></script>
+    <script type="text/javascript" src="./index_files/utils.js"></script>
+    <script type="text/javascript" src="./index_files/polyfill.js"></script>
+    <script type="text/javascript" src="./index_files/converse.js"></script>
+    <script type="text/javascript" src="./index_files/clickchat.js"></script>
+
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+    <p> Click the picture to change subject to 奔馳 or 宝马.</p>
+    <p><img src="./index_files/benz.jpg" id="benz"></p>
+    <p><img src="./index_files/bmw.jpg" id="bmw"></p>
+    <!--<p> Click the picture to contact me with a subject of 投资 or 其它合作.</p>
+    <p><img src="https://rolechat.biz/images/person.jpg" onclick="toChangeTopic('chat', 'yinglee@auth.rolechat.biz', '投资', 'https://rolechat.biz/images/person.jpg')" /></p>
+
+    <p><img src="https://rolechat.biz/images/xi.png" onclick="toChangeTopic('chat', 'yinglee@auth.rolechat.biz', '其它合作', 'https://rolechat.biz/images/xi.png')" /></p>-->
+
+
+<script>
+   clickchat.Init();
+
+    $("#benz").click(function () {
+        clickchat.startNewTopic('groupchat', 'sales@role.bizchat.us', '奔馳 Benz ABC Model 2016 Style Special Bonus Package', 'https://bizchat.us/images/benz.jpg');
+    })
+
+    $("#bmw").click(function() {
+        clickchat.startNewTopic('groupchat', 'sales@role.bizchat.us', '宝马 BMW XYZ Model 2015 Style Delux Packge', 'https://bizchat.us/images/bmw.jpg');
+    })
+</script><div id="conversejs" style="display: block;"><a href="https://bizchat.us/roledemo/index.html#" id="toggle-controlbox" class="toggle-controlbox" style="display: none;"><span class="conn-feedback">Contacts</span>
+<span style="" id="online-count">(0)</span>
+</a><div id="controlbox" class="chatbox" style="display: block; width: 200px;"><div class="flyout box-flyout" style="height: 450px; width: 200px;">
+    <div class="dragresize dragresize-top"></div>
+    <div class="dragresize dragresize-topleft"></div>
+    <div class="dragresize dragresize-left"></div>
+    <div class="chat-head controlbox-head">
+        <ul id="controlbox-tabs"><li><a class="s current" href="https://bizchat.us/roledemo/index.html#users">Contacts</a></li>
+<li><a class="s" href="https://bizchat.us/roledemo/index.html#chatrooms">Rooms</a></li>
+</ul>
+        <a class="chatbox-btn close-chatbox-button icon-close"></a>
+    </div>
+    <div class="controlbox-panes"><div id="users" class="controlbox-pane"><form class="pure-form set-xmpp-status" action="" method="post">
+    <span id="xmpp-status-holder"><dl id="target" class="dropdown">
+    <dt id="fancy-xmpp-status-select" class="fancy-dropdown"><div class="xmpp-status">
+    <a class="choose-xmpp-status online icon-online" data-value="I am online" href="https://bizchat.us/roledemo/index.html#" title="Click to change your chat status">
+        I am online
+    </a>
+    <a class="change-xmpp-status-message icon-pencil" href="https://bizchat.us/roledemo/index.html#" title="Click here to write a custom status message"></a>
+</div>
+</dt>
+    <dd><ul class="xmpp-status-menu" style="display: none;"><li>
+    <a href="https://bizchat.us/roledemo/index.html#" class="online" data-value="online">
+        <span class="icon-online"></span>
+        Online
+    </a>
+</li>
+<li>
+    <a href="https://bizchat.us/roledemo/index.html#" class="dnd" data-value="dnd">
+        <span class="icon-dnd"></span>
+        Busy
+    </a>
+</li>
+<li>
+    <a href="https://bizchat.us/roledemo/index.html#" class="away" data-value="away">
+        <span class="icon-away"></span>
+        Away
+    </a>
+</li>
+<li>
+    <a href="https://bizchat.us/roledemo/index.html#" class="offline" data-value="offline">
+        <span class="icon-offline"></span>
+        Offline
+    </a>
+</li>
+<li>
+    <a href="https://bizchat.us/roledemo/index.html#" class="logout" data-value="logout">
+        <span class="icon-logout"></span>
+        Log out
+    </a>
+</li>
+</ul></dd>
+</dl>
+</span>
+</form>
+<dl class="add-converse-contact dropdown">
+    <dt id="xmpp-contact-search" class="fancy-dropdown">
+        <a class="toggle-xmpp-contact-form icon-plus" href="https://bizchat.us/roledemo/index.html#" title="Click to add new chat contacts"> Add a contact</a>
+    </dt>
+    <dd class="search-xmpp" style="display:none"><ul><li>
+    <form class="pure-form add-xmpp-contact">
+        <input type="text" name="identifier" class="username" placeholder="e.g. user@example.com">
+        <button class="pure-button button-primary" type="submit">Add</button>
+    </form>
+</li>
+</ul></dd>
+</dl>
+<div id="converse-roster"><form class="pure-form roster-filter-group input-button-group">
+    <input style="display: none;" class="roster-filter" placeholder="Type to filter">
+    <select style="display: none;" class="filter-type">
+        <option value="contacts">Contacts</option>
+        <option value="groups">Groups</option>
+    </select>
+</form>
+<dl class="roster-contacts" style="display: block;"></dl></div></div><div id="chatrooms" class="controlbox-pane" style="display: none;"><form class="pure-form pure-form-stacked converse-form add-chatroom" action="" method="post">
+    <fieldset>
+        <label>Room name</label>
+        <input type="text" name="chatroom" class="new-chatroom-name" placeholder="Room name">
+        <label>Nickname</label> <input type="text" name="nick" class="new-chatroom-nick" placeholder="Nickname">
+        <input type="submit" class="pure-button button-primary" name="join" value="Join Room">
+    </fieldset>
+    <fieldset>
+        
+            <label>Server</label>
+        
+        <input type="text" name="server" class="new-chatroom-server" placeholder="Server">
+        <input type="button" class="pure-button button-secondary" name="show" id="show-rooms" value="Show rooms">
+    </fieldset>
+</form>
+<dl id="available-chatrooms"></dl>
+</div></div>
+</div>
+</div><div id="minimized-chats">
+    <a id="toggle-minimized-chats" href="https://bizchat.us/roledemo/index.html#"></a>
+    <div class="flyout minimized-chats-flyout"></div>
+</div>
+</div>
+
+
+</body></html>
