@@ -1,5 +1,5 @@
 # ContextualChat
-ContextualChat launches an XMPP MUC web chat (actually jcbrand/converse.js at https://github.com/jcbrand/converse.js) with a predefined topic according to the context. Instead usually people launches a chat by choosing a contact or MUC (group chat room) at first without context. BTW, this is a side product of my Hotline.Chat project.
+As a web chat demo, ContextualChat launches an XMPP MUC web chat (actually jcbrand/converse.js at https://github.com/jcbrand/converse.js) with a predefined topic according to the context. Instead usually people launches a chat by choosing a contact or MUC (group chat room) at first without context. BTW, this is a side product of my Hotline.Chat project.
 
 ## LIVE Demo
 A LIVE demo is at https://bizchat.us/roledemo/index.html.
